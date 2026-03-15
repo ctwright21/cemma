@@ -1587,13 +1587,9 @@ button {
     font-size: 26px;
   }
 
-  /* Guide image on mobile */
+  /* Guide image on mobile — show below card */
   .guide__right {
     display: contents;
-  }
-
-  .guide__image-wrap {
-    order: -1;
   }
 
   .guide__image {
