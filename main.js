@@ -123,6 +123,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
+  /* === IMAGE FALLBACK HANDLING === */
+  document.querySelectorAll('.site-image').forEach(img => {
+    img.addEventListener('error', function() {
+      const container = this.closest('.image-container');
+      if (container) {
+        container.style.background = '#E8F2E8';
+      }
+      this.style.display = 'none';
+    });
+  });
+
+
   /* === FORM HANDLING === */
   const form = document.getElementById('signup-form');
   const formCard = document.querySelector('.form-card__form');
